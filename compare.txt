@@ -1,6 +1,5 @@
 <!--==============================Top Navigation========================================-->
 <!--Top navigation dropdown-->
-<!--Top navigation dropdown-->
 <div class="row hide-for-medium-only">
 <div id="top-navigation" class="medium-12 columns">
     <nav class="top-bar" data-topbar>
@@ -11,22 +10,10 @@
       <section class="top-bar-section">
        <ul class="left">
           <li class="first-tab-border"> <a href="/">Home</a> </li>
-                  <!-- navigation object : LT Blue - Top Navigaiton -Top Navigation --><li><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=83973&amp;chid=1&amp;lang=en">Secondary 2 column</a>
-<ul class="multilevel-linkul-0">
-<li><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=84161&amp;chid=1&amp;lang=en">TEST Sub Navigation </a></li>
-
-</ul>
-</li><li><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=84018&amp;chid=1&amp;lang=en">Secondary Full Width</a>
-<ul class="multilevel-linkul-0">
-<li><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=84162&amp;chid=1&amp;lang=en">TEST Sub Navigation </a></li>
-
-</ul>
-</li> 
-         <li class="search-tab has-dropdown"> <a href="#"><img src="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=1995043172" 
-     alt="Search Icon" style="width : 20px; height : 20px;     "
-    class="" /></a>
-            <ul class="search-position dropdown">
-              <form id="search" method="get" action="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=82881&amp;chid=1&amp;lang=ensearch-result/">
+                  <!-- navigation object : LT Blue - Top Navigaiton -Top Navigation --><t4 type="navigation" id="7361"/> 
+          <li class="search-tab has-dropdown"> <a href="#"><t4 type="media" id="161602" formatter="image/*"/></a>
+            <ul  class="search-position dropdown"><!---style="margin-top:35px;"-->
+              <form id="search" method="get" action="<t4 type="navigation" id="7081"/>search-result/">
     
         <div id="searchbox">
           <input type="text" name="q" onfocus="if(this.value=='Search')value=''" onblur="if(this.value=='')value='Search';" class="text" style="margin-top:-35px;" size="38" value="Search" id="searchtext" />
@@ -40,4 +27,4 @@
   </div>
   
 </div>
-<!--END top navigation--> 
+<!--END top navigation--> 
