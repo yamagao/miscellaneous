@@ -1,0 +1,45 @@
+<?php
+defined('DB_SERVER') ? null : define("DB_SERVER", "");
+defined('DB_USER')   ? null : define("DB_USER", "");
+defined('DB_PASS')   ? null : define("DB_PASS", "");
+defined('DB_NAME')   ? null : define("DB_NAME", "");
+
+class MSSQLDatabase {
+
+	public $dbc;
+
+	function __construct() {
+		$this->openConnection();
+	}
+		
+	public function openConnection() {
+		// Database connection using PHP Data Objects (PDO) and prepared statements (aka parameterized queries)
+		// PDO and parameterized queries (using bindParam()) are used as a defense option against SQL Injection attacks
+		// This coding style allows the database to distinguish between code and data, regardless of what user input is supplied
+		
+		try {
+			$this->dbc = new PDO("sqlsrv:server=" . DB_SERVER . ";Database=" . DB_NAME, DB_USER, DB_PASS);
+			$this->dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		} catch(PDOException $e) {
+			//die(print_r($e->getMessage()));
+			//print "Error!: " . $e->getMessage() . "<br/>";
+			print "<p>Error connecting to database. Please contact the .</p>\n";
+			$this->dbc = null;
+			die();
+		}
+	}
+
+	public function closeConnection() {
+		// Close DB Connection
+		$this->dbpdoquery = null;
+		$this->dbc = null;
+	}
+
+}
+
+$db = new MSSQLDatabase();
+
+$dbpdoquery = $db->dbc->prepare("select * FROM Category", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+$dbpdoquery->execute();
+print_r( $dbpdoquery->fetchall(PDO::FETCH_ASSOC));
+?>
